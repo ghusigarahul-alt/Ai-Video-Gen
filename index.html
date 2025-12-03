@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Free AI Video Generator</h1>
+        <p>Generate videos from images, text with audio/sound, and chat with AI—all for free!</p>
+    </header>
+    
+    <nav>
+        <button onclick="showSection('image-to-video')">Image to Video</button>
+        <button onclick="showSection('text-to-video')">Text to Video</button>
+        <button onclick="showSection('ai-chat')">AI Chat</button>
+    </nav>
+    
+    <section id="image-to-video" class="tool-section">
+        <h2>Image to Video</h2>
+        <p>Upload an image and choose an animation style to generate a video.</p>
+        <input type="file" id="image-upload" accept="image/*">
+        <select id="animation-style">
+            <option value="zoom">Zoom In</option>
+            <option value="pan">Pan Across</option>
+            <option value="rotate">Rotate</option>
+        </select>
+        <button onclick="generateImageVideo()">Generate Video</button>
+        <div id="loading" style="display:none;">Generating... Please wait.</div>
+        <video id="output-video" controls style="display:none;"></video>
+    </section>
+    
+    <section id="text-to-video" class="tool-section" style="display:none;">
+        <h2>Text to Video with Audio</h2>
+        <p>Enter text to generate a video scene, with optional narration or sound.</p>
+        <textarea id="text-input" placeholder="Describe the video scene, e.g., 'A cat playing in a garden'"></textarea>
+        <input type="checkbox" id="add-audio"> Add AI Narration (Text-to-Speech)
+        <select id="sound-style" style="display:none;">
+            <option value="none">No Background Sound</option>
+            <option value="music">Background Music</option>
+            <option value="effects">Sound Effects</option>
+        </select>
+        <button onclick="generateTextVideo()">Generate Video</button>
+        <div id="loading-text" style="display:none;">Generating... Please wait.</div>
+        <video id="output-video-text" controls style="display:none;"></video>
+        <audio id="output-audio" controls style="display:none;"></audio>
+    </section>
+    
+    <section id="ai-chat" class="tool-section" style="display:none;">
+        <h2>AI Chat</h2>
+        <p>Ask the AI anything related to video generation or general questions.</p>
+        <div id="chat-history"></div>
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button onclick="sendChatMessage()">Send</button>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>

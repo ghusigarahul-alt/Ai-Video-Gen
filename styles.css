@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, #f4f4f4, #e0e0e0);
+    color: #333;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+.tool-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background: #0056b3;
+}
+video, audio {
+    width: 100%;
+    margin-top: 20px;
+}
+#chat-history {
+    height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+}
